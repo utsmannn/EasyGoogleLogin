@@ -136,6 +136,29 @@ Revoke with
 googleLogin.revokeAccess(context);
 ```
 
+## Google Sign In Button (Optional)
+For add button sign in with style, download ```firebase-ui``` in depedencies
+```gradle
+implementation 'com.firebaseui:firebase-ui-auth:4.3.0'
+```
+After sync, add this xml
+```xml
+<com.google.android.gms.common.SignInButton
+    android:id="@+id/sign_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+```
+And Cast to ```SignInButton```
+```java
+SignInButton signInButton = findViewById(R.id.sign_button);
+```
+
+![](https://i.ibb.co/GQcYS9D/image.png)
+
 ## Simple example
 [```MainActivity.java```](https://github.com/utsmannn/EasyGoogleLogin/blob/master/app/src/main/java/com/utsman/googlelogin/MainActivity.java#L25)
 
+---
+
+### License
+[LICENSE](/LICENSE)
