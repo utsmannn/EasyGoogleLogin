@@ -31,12 +31,11 @@ public class MainActivity extends AppCompatActivity implements LoginResultListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        statusText = findViewById(R.id.status);
 
         String token = getString(R.string.default_web_client_id);
-        googleLogin = new EasyGoogleLogin();
-        googleLogin.initGoogleLogin(this, token);
-
-        statusText = findViewById(R.id.status);
+        googleLogin = new EasyGoogleLogin(this);
+        googleLogin.initGoogleLogin(token, this);
 
         SignInButton signInButton = findViewById(R.id.sign_button);
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -68,9 +67,10 @@ public class MainActivity extends AppCompatActivity implements LoginResultListen
         googleLogin.onActivityResult(this, requestCode, data);
     }
 
+
     @Override
     public void onLoginSuccess(FirebaseUser user) {
-        Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
         statusText.setText(user.getDisplayName());
     }
 

@@ -35,9 +35,15 @@ public class EasyGoogleLogin {
 
     private GoogleSignInClient mGoogleSignInClient;
     private LoginResultListener listener;
+    private Context context;
 
-    public void initGoogleLogin(Context context, String token) {
-        listener = (LoginResultListener) context;
+    public EasyGoogleLogin(Context context) {
+        this.context = context;
+    }
+
+    public void initGoogleLogin(String token, LoginResultListener listener) {
+        this.listener = listener;
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(token)
                 .requestEmail()
