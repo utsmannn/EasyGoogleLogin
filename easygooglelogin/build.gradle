@@ -5,6 +5,30 @@
  */
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = "utsman"
+    bintrayName = "com.utsman"
+
+    libraryName = 'easy-google-login'
+
+    publishedGroupId = 'com.utsman'
+    artifact = 'easygooglelogin'
+    libraryVersion = '1.0.5'
+
+    libraryDescription = 'Easy implementation firebase google auth'
+    siteUrl = 'https://github.com/utsmannn/EasyGoogleLogin'
+    gitUrl = 'https://github.com/utsmannn/EasyGoogleLogin.git'
+    developerId = 'utsman'
+    developerName = 'Muhammad Utsman'
+    developerEmail = 'kucingapes@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+}
 
 android {
     compileSdkVersion 28
@@ -38,4 +62,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.firebase:firebase-auth:16.1.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
 }
