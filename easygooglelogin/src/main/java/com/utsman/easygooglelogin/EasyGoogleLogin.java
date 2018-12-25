@@ -49,7 +49,9 @@ public class EasyGoogleLogin {
 
     public void initOnStart() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        listener.onLoginSuccess(currentUser);
+        if (currentUser != null) {
+            listener.onLoginSuccess(currentUser);
+        }
     }
 
     public void onActivityResult(Context context, int requestCode, Intent data) {
