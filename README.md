@@ -3,6 +3,9 @@
 
  [ ![Download](https://api.bintray.com/packages/kucingapes/utsman/com.utsman/images/download.svg) ](https://bintray.com/kucingapes/utsman/com.utsman/_latestVersion)
  
+ ### Youtube simple tutorial
+ https://www.youtube.com/watch?v=Gic51O8fZxY&feature=youtu.be
+ 
  ## Setup google plugin and download library
  ### 1. Register your app in firebase auth
 - Create new project in firebase console
