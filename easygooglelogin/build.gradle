@@ -16,7 +16,7 @@ ext {
 
     publishedGroupId = 'com.utsman'
     artifact = 'easygooglelogin'
-    libraryVersion = '1.0.5'
+    libraryVersion = '1.0.6'
 
     libraryDescription = 'Easy implementation firebase google auth'
     siteUrl = 'https://github.com/utsmannn/EasyGoogleLogin'
@@ -37,7 +37,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.5"
+        versionName "1.0.6"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

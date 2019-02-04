@@ -70,7 +70,6 @@ public class EasyGoogleLogin {
                 }
             } catch (ApiException e) {
                 Log.w(TAG, "Google sign in failed", e);
-
                 listener.onLoginFailed(e);
             }
         }
