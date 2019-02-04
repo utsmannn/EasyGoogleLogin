@@ -43,7 +43,7 @@ apply plugin: 'com.google.gms.google-services'
 
 ### 3. Download this library, add in ```dependencies``` in build.gradle (app level)
 ```gradle
-implementation 'com.utsman:easygooglelogin:1.0.5'
+implementation 'com.utsman:easygooglelogin:1.0.6'
 ```
 
 ## Setup Google Sign-In
